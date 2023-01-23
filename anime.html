@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>anime...</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: segoe script;
+		}
+		body{
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			font-size: 1.5em;
+		}
+		ul{
+			position: relative;
+		}
+		ul li{
+			list-style: none;
+			text-align: center;
+		}
+		ul li a{
+			text-decoration: none;
+			color: black;
+			font-size: 2em;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			font-weight: 300;
+			display: inline-flex;
+		}
+		ul li a:hover{
+			background-color: #fff;
+			color: var(--clr);
+		}
+		ul:hover > li:not(:hover){
+			opacity: 0;
+		}
+		ul li a:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			opacity: 0;
+			z-index: -1;
+			font-size: 5em;
+			letter-spacing: 500px;
+			transition: letter-spacing 0.2s;
+			color: black;
+			font-weight: 500;
+			font-family: segoe script;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		ul li a:hover:before{
+			content: attr(data);
+			opacity: 1;
+			letter-spacing: 0;
+			background: var(--clr);
+			width: 250vh;
+			height: 250vh; 
+		}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<a href="#" data="home" style="--clr:red";>home</a>
+		</li>
+		<li>
+			<a href="#" data="about" style="--clr:cyan";>about</a>
+		</li>
+		<li>
+			<a href="#" data="contact" style="--clr:teal";>contact</a>
+		</li>
+		<li>
+			<a href="#" data="info" style="--clr:pink";>info</a>
+		</li>
+		<li>
+			<a href="#" data="help" style="--clr:yellow";>help</a>
+		</li>
+	</ul>
+
+</body>
+</html>
